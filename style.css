@@ -1,23 +1,23 @@
+/* Base Styles */
+
 body {
   font-family: "Nunito", sans-serif;
 }
 
-.hero h1 {
+h1, h2, h3 {
   text-align: center;
+}
+
+.hero-section h1 {
   font-size: 200%;
 }
-.hero h2 {
-  text-align: center;
+.hero-section h2 {
   font-weight: 100;
   font-size: 110%;
 }
-.hero iframe {
+.hero-section iframe {
   display: block;
   margin: 0 auto;
-}
-
-h3 {
-  text-align: center;
 }
 
 nav {
@@ -46,7 +46,7 @@ nav li .blue-button {
 
 p {
   margin: 0 auto;
-  width: 300px;
+  width: 40em;
 }
 
 form {
@@ -79,6 +79,39 @@ form .contact input {
   text-align: center;
   display: block;
   margin: 0 auto;
+}
+
+/* Grid Pattern Starts Here */
+/* .section-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+} */
+.information {
+  grid-column: 1/5;
+}
+.information a {
+  text-align: center;
+  display: block;
+}
+.grid-list {
+  display:grid;
+  /* grid-template: column; */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  list-style: none;
+  text-align: center;
+}
+.student-video {
+  display: flex;
+  justify-content: center;
+}
+ul {
+  padding-left: 0;
+}
+.student-video h4, p{
+  padding-left: 30px;
+}
+.student-video p {
+  width: 25em;
 }
 
 /*# sourceMappingURL=style.css.map */
