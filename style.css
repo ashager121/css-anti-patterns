@@ -7,6 +7,47 @@ body {
 h1, h2, h3 {
   text-align: center;
 }
+p {
+  margin: 0 auto;
+  width: 40em;
+}
+ul {
+  padding-left: 0;
+}
+.section-bottom {
+  margin-bottom: 120px;
+}
+
+/* Layout Styles */
+
+.kenzie-press__quote {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+}
+
+/* Grid Pattern Starts Here */
+
+.kenzie-courses {
+  display: flex;
+  justify-content: space-between;
+  max-width: 750px;
+  margin: 0 auto;
+}
+.meet-kenzie__cta {
+  text-align: center;
+  display: block;
+}
+.kenzie-teams {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  list-style: none;
+  text-align: center;
+}
+/* info wrapper grid ends here */
+
+/* Block Styles */
+
 
 .hero-section h1 {
   font-size: 200%;
@@ -19,12 +60,12 @@ h1, h2, h3 {
   display: block;
   margin: 0 auto;
 }
-nav {
+.kenzie-navbar {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-nav li {
+.kenzie-navbar__items {
   display: inline-block;
   margin-top: 0;
   margin-right: 12px;
@@ -32,7 +73,7 @@ nav li {
   margin-bottom: 0;
   text-decoration: underline;
 }
-nav li .blue-button {
+.kenzie-navbar__blue-button {
   background-color: blue;
   text-decoration: none;
   color: white;
@@ -42,38 +83,49 @@ nav li .blue-button {
   text-align: center;
   display: inline-block;
 }
-
-/* Layout Styles */
-
-p {
-  margin: 0 auto;
-  width: 40em;
+.student-info {
+  display: flex;
+  justify-content: center;
+}
+ .student-info__content {
+  padding-left: 30px;
+}
+.student-info__content p {
+  width: 25em;
 }
 
-/* Block Styles */
-
-
-/* End Styles */
-
-form {
-  margin: 0 auto;
-  max-width: 350px;
+.compare-programs__btn {
+ display: block;
+ margin: 0 auto;
+ padding: 20px;
+ background-color: blue;
+ color: white;
+ border-radius: 10px;
 }
-form .name input {
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 350px;
+}
+.signup-form__name input{
+  max-width: 50%;
   border-radius: 5px;
   padding: 15px;
-  margin: 5px;
 }
-form .contact input {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 5px;
+.signup-form__input input{
   border-radius: 5px;
+  margin: 5px;
   padding: 10px;
-  width: 300px;
+  width: 100%;
 }
-
-.signup-form form input[type=submit] {
+/* .signup-form__input--btn input:hover {
+    transition: input .3s ease-in-out;
+    transform: scale(2);
+} */
+.signup-form__input--btn input {
+  animation-name: buttonhover;
   border-width: 2px;
   border-color: blue;
   background-color: white;
@@ -87,37 +139,18 @@ form .contact input {
   margin: 0 auto;
 }
 
-/* Grid Pattern Starts Here */
-/* .section-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+/* @keyframes buttonhover {
+  0% {
+    padding: 15px;
+  }
+  50% {
+    padding: 30px;
+  }
+  100% {
+    padding: 15px;
+  }
 } */
-.information {
-  grid-column: 1/5;
-}
-.information a {
-  text-align: center;
-  display: block;
-}
-.grid-list {
-  display:grid;
-  /* grid-template: column; */
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  list-style: none;
-  text-align: center;
-}
-.student-video {
-  display: flex;
-  justify-content: center;
-}
-ul {
-  padding-left: 0;
-}
-.student-video h4, p{
-  padding-left: 30px;
-}
-.student-video p {
-  width: 25em;
-}
 
-/*# sourceMappingURL=style.css.map */
+/* @media (min-width: 540px){
+
+} */
