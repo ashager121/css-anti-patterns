@@ -3,6 +3,9 @@
 body {
   font-family: "Nunito", sans-serif;
 }
+body > * {
+  box-sizing: border-box;
+}
 
 h1, h2, h3 {
   text-align: center;
@@ -19,19 +22,19 @@ ul {
 }
 
 /* Layout Styles */
-
-.kenzie-press__quote {
+.kenzie-press {
   display: flex;
-  justify-content: space-between;
-  width: 250px;
+  justify-content: center;
+  flex-direction: column;
 }
+
 
 /* Grid Pattern Starts Here */
 
 .kenzie-courses {
   display: flex;
-  justify-content: space-between;
-  max-width: 750px;
+  flex-direction: column;
+  max-width: 350px;
   margin: 0 auto;
 }
 .meet-kenzie__cta {
@@ -39,11 +42,13 @@ ul {
   display: block;
 }
 .kenzie-teams {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  flex-direction: column;
   list-style: none;
   text-align: center;
 }
+
 /* info wrapper grid ends here */
 
 /* Block Styles */
@@ -73,6 +78,11 @@ ul {
   margin-bottom: 0;
   text-decoration: underline;
 }
+.kenzie-navbar__blue-button:hover {
+    transition: padding .4s ease-in-out;
+    padding: 15px;
+    width: 100px;
+}
 .kenzie-navbar__blue-button {
   background-color: blue;
   text-decoration: none;
@@ -87,45 +97,26 @@ ul {
   display: flex;
   justify-content: center;
 }
+.student-info__image:hover {
+  position: relative;
+  top: 0;
+  left: 0;
+  animation-name: imgspin;
+  animation-duration: 1s;
+}
+@keyframes imgspin {
+  100% {
+    top: 15px;
+    left: 15px;
+  }
+}
  .student-info__content {
   padding-left: 30px;
 }
 .student-info__content p {
   width: 25em;
 }
-
-.compare-programs__btn {
- display: block;
- margin: 0 auto;
- padding: 20px;
- background-color: blue;
- color: white;
- border-radius: 10px;
-}
-
-.signup-form {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 350px;
-}
-.signup-form__name input{
-  max-width: 50%;
-  border-radius: 5px;
-  padding: 15px;
-}
-.signup-form__input input{
-  border-radius: 5px;
-  margin: 5px;
-  padding: 10px;
-  width: 100%;
-}
-/* .signup-form__input--btn input:hover {
-    transition: input .3s ease-in-out;
-    transform: scale(2);
-} */
-.signup-form__input--btn input {
-  animation-name: buttonhover;
+.kenzie-courses__btn {
   border-width: 2px;
   border-color: blue;
   background-color: white;
@@ -133,24 +124,90 @@ ul {
   color: black;
   padding: 15px;
   border-radius: 6px;
-  width: 8em;
+  width: 10em;
+  text-align: center;
+  display: block;
+}
+
+.compare-programs__btn {
+  display: block; 
+  margin: 0 auto;
+  padding: 20px;
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.compare-programs__btn:hover{
+  transition: padding .4s ease-in-out;
+  padding: 30px;
+  width: 100px;
+}
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 350px;
+}
+.signup-form__name, .signup-form__input {
+  display: flex;
+}
+.signup-form__input {
+  flex-direction: column;
+}
+.signup-form__name input{
+  width: 50%;
+  border-radius: 5px;
+  padding: 15px;
+}
+.signup-form__input input{
+  display: block;
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 10px;
+  max-width: 100%;
+}
+.signup-form__input--btn input:hover {
+    transition: padding .4s ease-in-out;
+    padding: 30px;
+    width: 100px;
+}
+.signup-form__input--btn input {
+  border-width: 2px;
+  border-color: blue;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  padding: 15px;
+  border-radius: 6px;
+  width: 10em;
   text-align: center;
   display: block;
   margin: 0 auto;
 }
 
-/* @keyframes buttonhover {
-  0% {
-    padding: 15px;
-  }
-  50% {
-    padding: 30px;
-  }
-  100% {
-    padding: 15px;
-  }
-} */
 
-/* @media (min-width: 540px){
 
-} */
+@media (min-width: 775px){
+  .kenzie-press {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .kenzie-press__quote {
+    justify-content: space-around;
+  }
+  .kenzie-teams {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style: none;
+    text-align: center;
+  }
+  .kenzie-courses {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 750px;
+    margin: 0 auto;
+  }
+} 
