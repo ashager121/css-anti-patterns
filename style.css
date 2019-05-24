@@ -2,20 +2,29 @@
 
 body {
   font-family: "Nunito", sans-serif;
+  font-size: 1rem;
 }
 body > * {
   box-sizing: border-box;
 }
-
-h1, h2, h3 {
+h1 {
+  font-size: 1.75rem;
+}
+h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 p {
   margin: 0 auto;
-  width: 40em;
+  max-width: 40em;
 }
 ul {
   padding-left: 0;
+}
+.container {
+  max-width: 40em;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .section-bottom {
   margin-bottom: 120px;
@@ -27,19 +36,13 @@ ul {
   justify-content: center;
   flex-direction: column;
 }
-
-
-/* Grid Pattern Starts Here */
-
+.kenzie-press__quote {
+  margin: 0;
+  padding: 10px;
+}
 .kenzie-courses {
   display: flex;
   flex-direction: column;
-  max-width: 350px;
-  margin: 0 auto;
-}
-.meet-kenzie__cta {
-  text-align: center;
-  display: block;
 }
 .kenzie-teams {
   display: flex;
@@ -48,19 +51,29 @@ ul {
   list-style: none;
   text-align: center;
 }
-
-/* info wrapper grid ends here */
+.student-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.meet-kenzie__cta {
+  text-align: center;
+  display: block;
+  padding-top: 10px;
+}
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 350px;
+}
+.kenzie-team {
+  margin: 0 auto;
+  padding: 10px;
+}
 
 /* Block Styles */
 
-
-.hero-section h1 {
-  font-size: 200%;
-}
-.hero-section h2 {
-  font-weight: 100;
-  font-size: 110%;
-}
 .hero-section iframe {
   display: block;
   margin: 0 auto;
@@ -93,9 +106,9 @@ ul {
   text-align: center;
   display: inline-block;
 }
-.student-info {
-  display: flex;
-  justify-content: center;
+.student-info__image {
+  margin: 0 auto;
+  max-width: 200px;
 }
 .student-info__image:hover {
   position: relative;
@@ -116,7 +129,10 @@ ul {
 .student-info__content p {
   width: 25em;
 }
-.kenzie-courses__btn {
+.kenzie-course__month, .kenzie-course__day {
+  text-align: center;
+}
+.kenzie-course__btn {
   border-width: 2px;
   border-color: blue;
   background-color: white;
@@ -127,6 +143,7 @@ ul {
   width: 10em;
   text-align: center;
   display: block;
+  margin: 0 auto;
 }
 
 .compare-programs__btn {
@@ -143,24 +160,21 @@ ul {
   padding: 30px;
   width: 100px;
 }
-.signup-form {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 350px;
-}
-.signup-form__name, .signup-form__input {
-  display: flex;
-}
 .signup-form__input {
+  padding-top: 15px;
+  display: flex;
+}
+.signup-form__input--long {
   flex-direction: column;
 }
-.signup-form__name input{
-  width: 50%;
+.signup-form__input input{
   border-radius: 5px;
   padding: 15px;
 }
-.signup-form__input input{
+.signup-form__input--short input{
+  width: 50%;
+}
+.signup-form__input--long input{
   display: block;
   border-radius: 5px;
   margin: 5px 0;
@@ -186,9 +200,12 @@ ul {
   margin: 0 auto;
 }
 
-
-
 @media (min-width: 775px){
+  .student-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
   .kenzie-press {
     display: flex;
     justify-content: center;
@@ -207,7 +224,5 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-width: 750px;
-    margin: 0 auto;
   }
 } 

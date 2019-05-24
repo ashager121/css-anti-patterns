@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <nav class="kenzie-navbar">
+  <nav class="kenzie-navbar container">
     <ul class="kenzie-navbar__list">
       <li class="kenzie-navbar__items"><a href="#">Admissions</a></li>
       <li class="kenzie-navbar__items"><a href="#">Programs</a></li>
@@ -25,15 +25,15 @@
     </ul>
   </nav>
 
-  <section class="hero-section section-bottom">
-    <h1>Design your tech career</h1>
-    <h2>Kenzie Academy is a two-year learning track and apprenticeship program.</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/FqVHe2BGdEw" frameborder="0"
+  <section class="hero-section section-bottom container">
+    <h1 class="hero-section__heading">Design your tech career</h1>
+    <h3 class="hero-section__heading">Kenzie Academy is a two-year learning track and apprenticeship program.</h3>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/FqVHe2BGdEw" frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
       class="hero-section__video"></iframe>
   </section>
 
-  <section class="kenzie-press section-bottom">
+  <section class="kenzie-press section-bottom container">
     <blockquote class="kenzie-press__quote"
       cite="http://www.aei.org/publication/the-other-challenge-of-artificial-intelligence/">
       "The new Indianapolis-based venture is creating a new type of program that combines work and school to teach
@@ -44,35 +44,34 @@
     </blockquote>
   </section>
 
-  <section class="section-bottom">
-    <ul class="kenzie-courses">
-      <li class="kenzie-courses__items">
-        <div class="date">
-          <div class="month">Jul</div>
-          <div class="day">10</div>
-        </div>
-        <h3>Software Engineering</h3>
-        <button class="kenzie-courses__btn">Learn to Code</button>
-      </li>
-      <li class="kenzie-courses__items">
-        <div class="date">
-          <div class="month">Jul</div>
-          <div class="day">10</div>
-        </div>
-        <h3>User Experience</h3>
-        <button class="kenzie-courses__btn">Learn to Design</button>
-      </li>
-      <li class="kenzie-courses__items">
-        <div class="date">
-          <div class="month">Jul</div>
-          <div class="day">10</div>
-        </div>
-        <h3>Digital Marketing</h3>
-        <button class="kenzie-courses__btn">Learn to Market</button>
-      </li>
+  <section class="kenzie-courses section-bottom container">
+    <div class="kenzie-course">
+      <div class="kenzie-course__date">
+        <div class="kenzie-course__month">Jul</div>
+        <div class="kenzie-course__day">10</div>
+      </div>
+      <h3>Software Engineering</h3>
+      <button class="kenzie-course__btn">Learn to Code</button>
+    </div>
+    <div class="kenzie-course">
+      <div class="kenzie-course_date">
+        <div class="kenzie-course__month">Jul</div>
+        <div class="kenzie-course__day">10</div>
+      </div>
+      <h3>User Experience</h3>
+      <button class="kenzie-course__btn">Learn to Design</button>
+    </div>
+    <div class="kenzie-course">
+      <div class="kenzie-course__date">
+        <div class="kenzie-course__month">Jul</div>
+        <div class="kenzie-course__day">10</div>
+      </div>
+      <h3>Digital Marketing</h3>
+      <button class="kenzie-course__btn">Learn to Market</button>
+    </div>
   </section>
 
-  <section class="compare-programs section-bottom">
+  <section class="compare-programs section-bottom container">
     <h3 class="compare-programs__header">Not sure which program is right for you?</h3>
     <button class="compare-programs__btn">Compare Programs</button>
   </section>
@@ -80,7 +79,7 @@
   <!--Grid Section-->
 
   <div class="info-wrapper">
-    <section class="meet-kenzie section-bottom">
+    <section class="meet-kenzie section-bottom container">
       <h3 class="meet-kenzie__heading">Meet Kenzie</h3>
       <p class="meet-kenzie__body">We founded Kenzie Academy to tackle a major opportunities gap in America. We
         discovered that fast-growing
@@ -94,27 +93,27 @@
       <a class="meet-kenzie__cta" href="#">Read our story →</a>
     </section>
     <!-- grid-list to kenzie-teams -->
-    <ul class="kenzie-teams section-bottom">
-      <li class="kenzie-teams__group">
-        <img src="https://via.placeholder.com/180x80" alt="faces" />
-        <h4>Team</h4>
+    <ul class="kenzie-teams section-bottom container">
+      <li class="kenzie-team">
+        <img class="kenzie-team__img" src="https://via.placeholder.com/180x80" alt="faces" />
+        <h4 class="kenzie-team__heading">Team</h4>
       </li>
-      <li class="kenzie-teams__group">
-        <img src="https://via.placeholder.com/180x80" alt="faces" />
-        <h4>Board</h4>
+      <li class="kenzie-team">
+        <img class="kenzie-team__img" src="https://via.placeholder.com/180x80" alt="faces" />
+        <h4 class="kenzie-team__heading">Board</h4>
       </li>
-      <li class="kenzie-teams__group">
-        <img src="https://via.placeholder.com/180x80" alt="faces" />
-        <h4>Mentors</h4>
+      <li class="kenzie-team">
+        <img class="kenzie-team__img" src="https://via.placeholder.com/180x80" alt="faces" />
+        <h4 class="kenzie-team__heading">Mentors</h4>
       </li>
-      <li class="kenzie-teams__group">
-        <img src="https://via.placeholder.com/180x80" alt="faces" />
-        <h4>Advisors</h4>
+      <li class="kenzie-team">
+        <img class="kenzie-team__img" src="https://via.placeholder.com/180x80" alt="faces" />
+        <h4 class="kenzie-team__heading">Advisors</h4>
       </li>
     </ul>
     <!-- Grid Ends Here -->
 
-    <div class="student-info section-bottom">
+    <div class="student-info section-bottom container">
       <img class=student-info__image src="https://via.placeholder.com/200x100" alt="faces" />
       <div class="student-info__content">
         <h4>Students</h4>
@@ -125,17 +124,17 @@
     </section>
   </div>
 
-  <section class="signup-section section-bottom">
+  <section class="signup-section section-bottom container">
     <h3 class="signup-section__header">Let's Chat.</h3>
     <p class="signup-section__paragraph">Kenzie Academy is no small commitment. If we've piqued your interest today,
       we'd love to keep the conversation
       going.</p>
     <form class="signup-form">
-      <div class="signup-form__name">
+      <div class="signup-form__input signup-form__input--short">
         <input placeholder="First Name" />
         <input placeholder="Last Name" />
       </div>
-      <div class="signup-form__input">
+      <div class="signup-form__input signup-form__input--long">
         <input placeholder="Email" />
         <input placeholder="Phone" />
       </div>
